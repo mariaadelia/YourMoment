@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="pt-br">
-    <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- CSS-->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Logo na aba -->
@@ -15,112 +17,147 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Forest - Timer Pomodoro</title>
-    </head>
-    
-    <!-- vou ter que colocar o bg de floresta style="background-image:url(assets/img/banner1.png);" -->
-    <body class="ftespecial" style="background-image:url(assets/img/forest.jpg);">
+</head>
 
-        <!--Menu-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark " style="background-image: url(assets/img/forest.jpg);">
-            <div class=" container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/logo2.png" alt="" width="30" height="24">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html" style="background-color:#f1850a88;color: #000000;">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pomodoro.html" style="background-color:#f1850a88; color: #000000;">Timer Pomodoro</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false" style="background-color:#f1850a88; color: #000000;">
-                                Contato
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:#f1850a88;">
-                                <li><a class="dropdown-item" href="seuespaco.html">Seu espaço</a>
-                                </li>
-                                <li><a class="dropdown-item" href="https://github.com/mariaadelia" target="_blank">Github do Projeto</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+<!-- vou ter que colocar o bg de floresta style="background-image:url(assets/img/banner1.png);" -->
+
+<body class="ftespecial" style="background-image:url(assets/img/forest.jpg);">
+
+    <!--Menu-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark " style="background-image: url(assets/img/forest.jpg);">
+        <div class=" container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/logo2.png" alt="" width="30" height="24">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"
+                            style="background-color:#f1850a88;color: #000000;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pomodoro.html"
+                            style="background-color:#f1850a88; color: #000000;">Timer Pomodoro</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"
+                            style="background-color:#f1850a88; color: #000000;">
+                            Contato
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:#f1850a88;">
+                            <li><a class="dropdown-item" href="seuespaco.html">Seu espaço</a>
+                            </li>
+                            <li><a class="dropdown-item" href="https://github.com/mariaadelia" target="_blank">Github do
+                                    Projeto</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        <!--/Menu-->
-        
-        <!--Corpo do site -->
-        <div class="container mt-5" style="background-color: #f1850a88"> <!-- Depois centralizar esse retangulo-->
+        </div>
+    </nav>
+    <!--/Menu-->
 
-            <!--Audio da página-->
-            <audio src="https://drive.google.com/file/d/16mSGdXWjFgmH0tuTKuv2hWF6c4knpfC0/view?usp=sharing" type = "audio/mpeg"></audio>
-            <!--Audio da página-->
+    <!--Corpo do site -->
+    <div class="container mt-5" style="background-color: #f1850a88">
+        <!-- Depois centralizar esse retangulo-->
 
-            <!--Timer-->
-            <div class="row d-flex justify-content-center mt-5 ">
-                <div class="col-md-8">
-                    <!--Config-->
-                    <div id="config" class="row d-flex justify-content-center">
-                        <div class="col">
+        <!--Audio da página-->
+        <audio src="https://drive.google.com/file/d/16mSGdXWjFgmH0tuTKuv2hWF6c4knpfC0/view?usp=sharing"
+            type="audio/mpeg"></audio>
+        <!--Audio da página-->
 
-                            <!--Row dos inputs(atraves dos forms)-->
-                            <div class="row d-flex justify-content-center">
-                                <div class="col-md-3">
-                                    <div class="mb-3">
-                                        <label for="tempo" style="font-size: 20pt;" class="form-label d-flex justify-content-center">Tempo</label>
-                                        <input type="number" class="form-control form-control-lg bg-light border-0 shadow" id="tempo">
-                                    </div>
+        <!--Timer-->
+            <!--Config-->
+        <div class="row d-flex justify-content-center mt-5 ">
+            <div class="col-md-8">
+                <div id="config" class="row d-flex justify-content-center">
+                    <div class="col">
+
+                        <!--Row dos inputs(atraves dos forms)-->
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label for="tempo" style="font-size: 20pt;"
+                                        class="form-label d-flex justify-content-center">Tempo</label>
+                                    <input type="number" class="form-control form-control-lg bg-light border-0 shadow"
+                                        id="tempo">
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="mb-3">
-                                        <label for="pausa" style="font-size: 20pt;" class="form-label d-flex justify-content-center">Pausa</label>
-                                        <input type="number" class="form-control form-control-lg bg-light border-0 shadow" id="pausa">
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="mb-3">
-                                        <label for="sessoes" style="font-size: 20pt;" class="form-label d-flex justify-content-center">Sessões</label>
-                                        <input type="number" class="form-control form-control-lg bg-light border-0 shadow" id="sessoes">
-                                    </div>
-                                </div>
-                            <!--/Row dos inputs(atraves dos forms)-->
                             </div>
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label for="pausa" style="font-size: 20pt;"
+                                        class="form-label d-flex justify-content-center">Pausa</label>
+                                    <input type="number" class="form-control form-control-lg bg-light border-0 shadow"
+                                        id="pausa">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label for="sessoes" style="font-size: 20pt;"
+                                        class="form-label d-flex justify-content-center">Sessões</label>
+                                    <input type="number" class="form-control form-control-lg bg-light border-0 shadow"
+                                        id="sessoes">
+                                </div>
+                            </div>
+                            <!--/Row dos inputs(atraves dos forms)-->
+                        </div>
 
                         <!--Botão Iniciar-->
                         <div class="d-grid gap-2 col-6 mx-auto">
                             <button class="btn btn-light shadow" type="button">Iniciar</button>
                         </div>
                         <!--/Botão Iniciar-->
-                        </div>
+
                     </div>
-                    <!--/Config-->
                 </div>
             </div>
-            <!--/Timer-->
+            <!--Contagem regressiva-->
+            <div id="timer" class="mt-0 d-flex justify-content-center">
+                <div class="row mb-3">
+                    <div class="col">
+                        <h3 id="title" class="text-center"></h3> <!--O java script colocará o conteúdo de h3 automaticamente-->
+                    </div>
+                </div>
 
-            <!--Botão de play e pause-->
-            <div class="mx-auto mt-3" style="width: 100px;">
-                <a>
-                    <i class="fa fa-play-circle-o" style="font-size: 40pt;" aria-hidden="true"></i>
-                    <i class="fa fa-pause-circle-o" style="font-size: 40pt;" aria-hidden="true"></i>
-                </a>
+                <!--Para falar quantas sessões faltam-->
+                <div class="row mb-3">
+                    <div class="col">
+                        <h3 id="title_sessao" class="text-center text-secondary"></h3> <!--Text secondary para o texto ser mais clarinho-->
+                    </div>
+                </div>
+
             </div>
-            <!--/Botão de play e pause-->
-
+            <!--/Contagem regressiva-->
         </div>
-        <!--/Corpo do site-->
+            <!--/Config-->
+        <!--/Timer-->
 
-        
-        <!-- JS -->
-        <script src="assets/javascript/script.js"></script>
-        <!-- Bootstrap JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    </body>
+        <!--Botão de play e pause-->
+        <div class="mx-auto mt-3" style="width: 100px;">
+            <a>
+                <i class="fa fa-play-circle-o" style="font-size: 40pt;" aria-hidden="true"></i>
+                <i class="fa fa-pause-circle-o" style="font-size: 40pt;" aria-hidden="true"></i>
+            </a>
+        </div>
+        <!--/Botão de play e pause-->
+
+    </div>
+    <!--/Corpo do site-->
+
+
+    <!-- JS -->
+    <script src="assets/javascript/script.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
