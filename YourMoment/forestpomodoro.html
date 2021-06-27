@@ -68,11 +68,6 @@
     <div class="container mt-5" style="background-color: #f1850a88">
         <!-- Depois centralizar esse retangulo-->
 
-        <!--Audio da página-->
-        <audio src="https://drive.google.com/file/d/16mSGdXWjFgmH0tuTKuv2hWF6c4knpfC0/view?usp=sharing"
-            type="audio/mpeg"></audio>
-        <!--Audio da página-->
-
         <!--Timer-->
             <!--Config-->
         <div class="row d-flex justify-content-center mt-5 ">
@@ -88,6 +83,8 @@
                                         class="form-label d-flex justify-content-center">Tempo</label>
                                     <input type="number" class="form-control form-control-lg bg-light border-0 shadow"
                                         id="tempo">
+                                    <!--Erro caso o usuário não digite-->
+                                    <small class="text-light" id="erro_tempo"></small>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -96,6 +93,8 @@
                                         class="form-label d-flex justify-content-center">Pausa</label>
                                     <input type="number" class="form-control form-control-lg bg-light border-0 shadow"
                                         id="pausa">
+                                    <!--Erro caso o usuário não digite-->
+                                    <small class="text-light" id="erro_pausa"></small>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -104,6 +103,8 @@
                                         class="form-label d-flex justify-content-center">Sessões</label>
                                     <input type="number" class="form-control form-control-lg bg-light border-0 shadow"
                                         id="sessoes">
+                                        <!--Erro caso o usuário não digite-->
+                                    <small class="text-light" id="erro_sessoes"></small>
                                 </div>
                             </div>
                             <!--/Row dos inputs(atraves dos forms)-->
@@ -111,27 +112,46 @@
 
                         <!--Botão Iniciar-->
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <button class="btn btn-light shadow" type="button">Iniciar</button>
+                            <button onclick="iniciar()" class="btn btn-light shadow" type="button">Iniciar</button>
                         </div>
                         <!--/Botão Iniciar-->
 
                     </div>
                 </div>
             </div>
+
             <!--Contagem regressiva-->
-            <div id="timer" class="mt-0 d-flex justify-content-center">
+            <div id="timer" class="mt-0 d-flex justify-content-center" style="display: none;">
+
+                <!--Título em cima do title-->
                 <div class="row mb-3">
                     <div class="col">
                         <h3 id="title" class="text-center"></h3> <!--O java script colocará o conteúdo de h3 automaticamente-->
                     </div>
                 </div>
+                <!--/Título em cima do title-->
 
-                <!--Para falar quantas sessões faltam-->
+                <!--Timer-->
                 <div class="row mb-3">
                     <div class="col">
-                        <h3 id="title_sessao" class="text-center text-secondary"></h3> <!--Text secondary para o texto ser mais clarinho-->
+                        <h3 id="title_sessao" class="text-center text-secondary"></h3> <!--Text secondary para o texto ser mais clarinho e o JS vai colocar automaticamente-->
                     </div>
                 </div>
+                <!--/Timer-->
+
+                <!--Para falar quantas sessões faltam-->
+                <div class="row shadow time">
+                    <div class="col-5 p-0">
+                        <h2 class="tth2"id="minutes_ok"></h2> <!--Minutos-->
+                    </div>
+                    <div class="col-1 p-0 d-flex justify-content-center">
+                        <h2 class="tth2">:</h2> <!--:-->
+                    </div>
+                    <div class="col-5 ps-0">
+                        <h2 class="tth2" id="seconds_ok"></h2> <!--Segundos-->
+                    </div>
+                </div>
+                <!--/Para falar quantas sessões faltam-->
 
             </div>
             <!--/Contagem regressiva-->
@@ -142,11 +162,24 @@
         <!--Botão de play e pause-->
         <div class="mx-auto mt-3" style="width: 100px;">
             <a>
-                <i class="fa fa-play-circle-o" style="font-size: 40pt;" aria-hidden="true"></i>
-                <i class="fa fa-pause-circle-o" style="font-size: 40pt;" aria-hidden="true"></i>
+                <i id="play" class="fa fa-play-circle-o" style="font-size: 40pt; display: none;" aria-hidden="true"></i>
+            </a>
+            <a>
+                <i id="pause" class="fa fa-pause-circle-o" style="font-size: 40pt; display: none;" aria-hidden="true"></i>
             </a>
         </div>
         <!--/Botão de play e pause-->
+
+        <!--Mensagem de finalização-->
+        <div id="fim" style="display: none;">
+            <h1 class="text-success text-center"> Parabéns!</h1>
+            <div class="row mt-5 mb-5 d-flex justify-content-center">
+                <div class="col-md-9 d-flex justify-content-center">
+                    <a href="pomodoro.html" class="btn btn-danger shadow btn-lg">Inicio</a>
+                </div>
+            </div>
+        </div>
+        <!--Mensagem de finalização-->
 
     </div>
     <!--/Corpo do site-->

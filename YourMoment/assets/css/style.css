@@ -59,3 +59,17 @@ input[type="number"]
     margin-right: 0;
     width: 340px;
 }
+
+.time{
+    color: #ffffff;
+    text-align: center;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 10rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.tth2{
+    font-size: 90pt;
+}
